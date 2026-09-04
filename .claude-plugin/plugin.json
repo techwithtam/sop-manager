@@ -1,0 +1,11 @@
+{
+  "name": "sop-manager",
+  "displayName": "SOP Manager",
+  "version": "0.6.2",
+  "description": "Create and find SOPs, audit library health, manage review queues, and report SOP analytics through one conversation.",
+  "author": {
+    "name": "SOP Manager"
+  },
+  "license": "UNLICENSED",
+  "keywords": ["sop", "notion", "operations", "knowledge-management"]
+}

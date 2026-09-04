@@ -1,0 +1,11 @@
+interface:
+  display_name: "SOP Manager"
+  short_description: "Manage an approved SOP library in Notion"
+  default_prompt: "Use $sop-manager to audit my SOP library without changing anything."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "notion"
+      description: "Official Notion connector"
+      transport: "streamable_http"
+      url: "https://mcp.notion.com/mcp"

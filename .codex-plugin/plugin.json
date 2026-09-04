@@ -1,0 +1,24 @@
+{
+  "name": "sop-manager",
+  "version": "0.6.2",
+  "description": "Create and find SOPs, audit library health, manage review queues, and report SOP analytics through one conversation.",
+  "author": {
+    "name": "SOP Manager"
+  },
+  "license": "UNLICENSED",
+  "keywords": ["sop", "notion", "operations", "knowledge-management"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "SOP Manager",
+    "shortDescription": "Manage a governed SOP library in Notion",
+    "longDescription": "Create evidence-grounded Core Process, SOP, Work Instruction, and Checklist drafts; retrieve only Approved SOPs; audit library health; prioritize human review queues; report current-state analytics; and submit missing-SOP requests using the official Notion connector.",
+    "developerName": "SOP Manager",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "defaultPrompt": [
+      "Set up SOP Manager in my Notion workspace.",
+      "Audit my SOP library without changing anything.",
+      "Show me the SOPs that need review next."
+    ]
+  }
+}
