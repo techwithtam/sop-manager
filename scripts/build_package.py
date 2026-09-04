@@ -5,7 +5,7 @@ from pathlib import Path
 from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 
 ROOT = Path(__file__).resolve().parents[1]
-REPOSITORY = ROOT.parents[1]
+REPOSITORY = ROOT.parents[1] if ROOT.parent.name == "plugins" else ROOT
 CLAUDE_OUTPUT = REPOSITORY / "dist" / "claude" / "sop-manager.plugin"
 OPENAI_OUTPUT = REPOSITORY / "dist" / "openai" / "sop-manager-skill.zip"
 SKILL_ROOT = ROOT / "skills" / "sop-manager"
