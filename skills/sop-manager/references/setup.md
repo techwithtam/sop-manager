@@ -1,6 +1,6 @@
 # Set up SOP Manager
 
-Use Claude's official Notion connector. Do not request or accept an API token, integration secret, MCP installation, API schema, or database ID.
+Use the current product's official Notion connector. Do not request or accept an API token, integration secret, MCP installation, API schema, or database ID.
 
 1. Confirm the user connected the Notion workspace that contains their duplicated SOP Manager template.
 2. Search for the exact page title `SOP Manager Home`.

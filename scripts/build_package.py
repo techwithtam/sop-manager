@@ -41,6 +41,11 @@ def main() -> None:
             info.compress_type = ZIP_DEFLATED
             info.external_attr = 0o644 << 16
             archive.writestr(info, path.read_bytes())
+        license_path = ROOT / "LICENSE"
+        info = ZipInfo("sop-manager/LICENSE", date_time=(2026, 1, 1, 0, 0, 0))
+        info.compress_type = ZIP_DEFLATED
+        info.external_attr = 0o644 << 16
+        archive.writestr(info, license_path.read_bytes())
 
     print(CLAUDE_OUTPUT)
     print(OPENAI_OUTPUT)

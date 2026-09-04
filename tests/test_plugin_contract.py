@@ -23,6 +23,7 @@ class PluginContractTests(unittest.TestCase):
 
     def test_setup_requires_no_tokens_ids_or_schema_configuration(self):
         setup = (ROOT / "skills" / "sop-manager" / "references" / "setup.md").read_text()
+        self.assertIn("current product's official Notion connector", setup)
         self.assertIn("Do not request or accept an API token", setup)
         self.assertIn("SOP Manager Home", setup)
         self.assertIn("SOP Library", setup)
@@ -33,6 +34,31 @@ class PluginContractTests(unittest.TestCase):
         self.assertIn("Markdown links", setup)
         self.assertIn("A plain page title is not sufficient", setup)
         self.assertIn("stable Notion URL", setup)
+
+    def test_skill_description_has_concrete_route_triggers(self):
+        for trigger in (
+            "set up SOP Manager",
+            "create an SOP",
+            "find an approved SOP",
+            "audit my SOP library",
+            "show the SOP review queue",
+            "report SOP analytics",
+            "request a missing SOP",
+        ):
+            self.assertIn(f'"{trigger}"', SKILL)
+
+    def test_manifests_point_to_the_standalone_repository(self):
+        repository = "https://github.com/techwithtam/sop-manager"
+        for manifest in (MANIFEST, OPENAI_MANIFEST):
+            self.assertEqual(manifest["homepage"], repository)
+            self.assertEqual(manifest["repository"], repository)
+
+    def test_public_plugin_uses_mit_license(self):
+        license_text = (ROOT / "LICENSE").read_text()
+        self.assertEqual(MANIFEST["license"], "MIT")
+        self.assertEqual(OPENAI_MANIFEST["license"], "MIT")
+        self.assertIn("MIT License", license_text)
+        self.assertIn("Copyright (c) 2026 SOP Manager contributors", license_text)
 
     def test_find_is_approved_only_and_metadata_first(self):
         find = (ROOT / "skills" / "sop-manager" / "references" / "find.md").read_text()

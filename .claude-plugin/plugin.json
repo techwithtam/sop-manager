@@ -1,11 +1,13 @@
 {
   "name": "sop-manager",
   "displayName": "SOP Manager",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "description": "Create and find SOPs, audit library health, manage review queues, and report SOP analytics through one conversation.",
   "author": {
     "name": "SOP Manager"
   },
-  "license": "UNLICENSED",
+  "homepage": "https://github.com/techwithtam/sop-manager",
+  "repository": "https://github.com/techwithtam/sop-manager",
+  "license": "MIT",
   "keywords": ["sop", "notion", "operations", "knowledge-management"]
 }

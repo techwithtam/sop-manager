@@ -1,6 +1,6 @@
 ---
 name: sop-manager
-description: Set up or use a Notion SOP workspace to create drafts, find Approved SOPs, audit library health, prioritize reviews, report analytics, and submit missing-SOP requests.
+description: This skill should be used when the user asks to "set up SOP Manager", "create an SOP", "find an approved SOP", "audit my SOP library", "show the SOP review queue", "report SOP analytics", or "request a missing SOP" in a Notion SOP workspace.
 ---
 
 # SOP Manager
@@ -19,7 +19,7 @@ If the route is unclear, ask one short question. Do not make a Notion call merel
 
 ## Setup
 
-Read [setup.md](references/setup.md). Use Claude's official Notion connector. Never ask for an API token, MCP server, API schema, or database ID. If the template is missing, give the user the public template link from the setup reference. Find the duplicated `SOP Manager Home` page, follow its links to `SOP Library` and `SOP Requests`, and verify their schemas. If several home pages match, show linked choices and ask the user to select one. Do not create or alter a database during setup without showing the exact change and receiving confirmation.
+Read [setup.md](references/setup.md). Use the current product's official Notion connector. Never ask for an API token, MCP server, API schema, or database ID. If the template is missing, give the user the public template link from the setup reference. Find the duplicated `SOP Manager Home` page, follow its links to `SOP Library` and `SOP Requests`, and verify their schemas. If several home pages match, show linked choices and ask the user to select one. Do not create or alter a database during setup without showing the exact change and receiving confirmation.
 
 ## Create
 
